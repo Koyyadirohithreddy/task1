@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index and Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="index-view" class="container">
+    <h1>Welcome to the Index Page</h1>
+    <p>This is the main page. Click the button to go to the Dashboard.</p>
+    <button onclick="showDashboard()">Go to Dashboard</button>
+  </div>
+
+  <div id="dashboard-view" class="container" style="display: none;">
+    <h1>Welcome to the Dashboard</h1>
+    <p>This is the dashboard. Click the button to go back to the Index page.</p>
+    <button onclick="showIndex()">Go to Index</button>
+  </div>
+
+  <script>
+    function showDashboard() {
+      document.getElementById('index-view').style.display = 'none';
+      document.getElementById('dashboard-view').style.display = 'block';
+    }
+
+    function showIndex() {
+      document.getElementById('dashboard-view').style.display = 'none';
+      document.getElementById('index-view').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
